@@ -238,7 +238,38 @@
 
 <script src="script.js"></script>
 
+<!-- Minimal script: only makes the Select Folder button open the folder picker and updates #folderStatus -->
+<script>
+  (function () {
+    const selectFolderBtn = document.getElementById('selectFolderBtn');
+    const fileInput = document.getElementById('fileInput');
+    const folderStatus = document.getElementById('folderStatus');
+
+    if (!selectFolderBtn || !fileInput || !folderStatus) return;
+
+    // When visible button clicked, trigger native file input (folder picker)
+    selectFolderBtn.addEventListener('click', function () {
+      // fileInput.click() must be triggered by user gesture; this is allowed here
+      try {
+        fileInput.click();
+      } catch (err) {
+        console.error('Error opening folder picker:', err);
+      }
+    });
+
+    // Update the folder status when user picks a folder
+    fileInput.addEventListener('change', function (event) {
+      const files = event.target.files;
+      if (files && files.length > 0) {
+        // Count files and show example first file path if you want
+        folderStatus.textContent = `✅ Selected folder contains ${files.length} file(s).`;
+      } else {
+        folderStatus.textContent = '❌ No folder selected.';
+      }
+    });
+  })();
+</script>
+
 </body>
 
-</html>
-
+</html> 
